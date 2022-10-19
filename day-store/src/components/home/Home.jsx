@@ -2,7 +2,7 @@ import './Home.css';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllCities } from '../../redux/actions';
-import GraficCard from '../views/GraficCard';
+import PrintPdf from '../views/GraficCard';
 import { Col, Row } from 'react-bootstrap'
 import DropdownCom from '../views/DropdownCom';
 
@@ -32,7 +32,7 @@ const Home = () => {
               if (numero > 3) numero = 0;
               else ++numero
               return <Col>
-                <GraficCard
+                <PrintPdf
                   ciudad={e.ciudad}
                   meta={e.meta}
                   servicio={e.servicio}
@@ -44,7 +44,7 @@ const Home = () => {
               :
               city.map(e =>
                 <Col>
-                  <GraficCard
+                  <PrintPdf
                     ciudad={e.ciudad}
                     meta={e.meta}
                     servicio={e.servicio}

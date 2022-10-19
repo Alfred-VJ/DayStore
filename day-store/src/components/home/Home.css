@@ -16,7 +16,6 @@ position: absolute;
     padding-bottom: 2%;
 }
 
-
 .hrGrafic{
     color: rgb(255, 217, 0);
 }
@@ -28,6 +27,13 @@ position: absolute;
  margin-top: 5%;
 
 }
+
+.title__btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .cont__card{
     background-color: rgba(73, 138, 143, 0.192);
