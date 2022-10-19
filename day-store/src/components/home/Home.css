@@ -1,0 +1,54 @@
+.cont__graficas{
+background-color: rgb(29, 39, 66);
+width: 100%;
+position: absolute;
+}
+
+.__CardUp{
+    background-color: rgb(16, 12, 36);
+    box-shadow: 1px 1px 13px #6fb79360;
+}
+
+.title__Card{
+    color: aliceblue;
+    padding-top: 3%;
+    margin-left: 8%;
+    padding-bottom: 2%;
+}
+
+
+.hrGrafic{
+    color: rgb(255, 217, 0);
+}
+
+.content__graficCard{
+   margin: 5%;
+}
+.__Card{
+ margin-top: 5%;
+
+}
+
+.cont__card{
+    background-color: rgba(73, 138, 143, 0.192);
+    color: aliceblue;
+}
+
+.title__ciudades{
+    display: flex;
+    color: aliceblue;
+    margin: 10vh 10vh 0vh 10vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn__dorp{
+    background-color: rgb(185, 127, 0);
+    border: none;
+}
+
+.btn__dorp:hover{
+    background-color: rgb(29, 39, 66);
+    border: solid rgb(185, 127, 0);
+    color:rgb(185, 127, 0);
+}

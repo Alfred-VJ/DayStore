@@ -1,4 +1,4 @@
-import { GET_CIUDADES } from "./actions.types";
+import { GET_CIUDADES, GET_CITY, RESET } from "./actions.types";
 import axios from 'axios';
 
 
@@ -13,5 +13,18 @@ export const getAllCities = () => {
         } catch (error) {
             console.error(error);
         }
+    }
+}
+
+export const getCity = (id) => {
+    return {
+        type: GET_CITY,
+        payload: id,
+    }
+}
+
+export const reset = () => {
+    return {
+        type: RESET,
     }
 }

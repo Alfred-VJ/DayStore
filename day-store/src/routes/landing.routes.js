@@ -3,6 +3,6 @@ import LandingPage from '../components/landing/LandingPge';
 
 export const LandingRoute = () => {
   return <Routes>
-    <Route path='/DayStore' element={<LandingPage />} />
+    <Route path='/' element={<LandingPage />} />
   </Routes>
 }

@@ -45,6 +45,8 @@
 }
 
 .bnt-landing:hover{
+    background-color: rgb(29, 39, 66);
     border: solid rgb(185, 127, 0);
-    background-color: rgba(10, 31, 58, 0);
+    color:rgb(185, 127, 0);
+    font-size: medium;
 }
