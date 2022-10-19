@@ -20,6 +20,7 @@
     "react-to-print": "^2.14.7",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
+    "save-html-as-image": "^1.7.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

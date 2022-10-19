@@ -1,15 +1,32 @@
 import React, { forwardRef, useRef } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Dropdown } from 'react-bootstrap';
 import { DoughnutChart } from '../../charts/DoughnutChart';
 import { useReactToPrint } from 'react-to-print';
+import { saveAsPng, saveAsJpeg } from 'save-html-as-image';
+
 
 const GraficCard = forwardRef((props, ref) => {
+  const ii__gr = document.getElementById(props.id);
+  const imp = (formato) => {
+    formato === "png" ? saveAsPng(ii__gr) : saveAsJpeg(ii__gr);
+  }
+console.log(ii__gr)
   return (
-    <div ref={ref} className='__Card'>
+    <div ref={ref} className='__Card' id={props.id}>
       <Card className='__CardUp'>
         <div className='title__btn'>
-        <h3 className='title__Card'>{props.ciudad}</h3>
-        {props.btn}
+          <h3 className='title__Card'>{props.ciudad}</h3>
+          <Dropdown style={{ marginRight: '10px' }}>
+            <Dropdown.Toggle className='btn__dorp' id="dropdown-basic">
+              Imprimir
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              {props.btn}
+              <Dropdown.Item onClick={() => imp("png")}>Imprimir png</Dropdown.Item>
+              <Dropdown.Item onClick={() => imp("jpg")}>Imprimir jpg</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+
         </div>
         <Card className='cont__card'>
           <DoughnutChart options={{
@@ -18,16 +35,11 @@ const GraficCard = forwardRef((props, ref) => {
               foreColor: '#FFF',
 
             },
-            //colores de porcentaje de grafica
             dataLabels: {
               style: {
                 colors: ['#FFF', '#FFF']
               }
             },
-            //colores de fondo de grafica
-            //   fill: {
-            //     colors: ['#F44336', '#E91E63']
-            //   },
 
             dropShadow: {
               enabled: true,
@@ -76,10 +88,11 @@ const PrintPdf = (props) => {
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
-let btn = <Button style={{background:'none', border:'none'}} onClick={handlePrint}>Imprimir en pdf</Button>
+
+  let btn = <Dropdown.Item onClick={handlePrint}>Imprimir pdf</Dropdown.Item>
   return (
     <div>
-       
+
       <GraficCard
         ref={componentRef}
         ciudad={props.ciudad}
@@ -87,6 +100,7 @@ let btn = <Button style={{background:'none', border:'none'}} onClick={handlePrin
         servicio={props.servicio}
         colorGraf={props.colorGraf}
         btn={btn}
+        id={props.id}
       />
     </div>
   );

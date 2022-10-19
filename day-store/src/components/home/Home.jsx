@@ -5,13 +5,14 @@ import { getAllCities } from '../../redux/actions';
 import PrintPdf from '../views/GraficCard';
 import { Col, Row } from 'react-bootstrap'
 import DropdownCom from '../views/DropdownCom';
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
+
   const { ciudades, city } = useSelector(state => state);
   const dispatch = useDispatch();
   const colorGraf = [['#ffa43a', '#75c7ff'], ['#68da3e', '#416864'], ['#b93af8', '#d6ebc1'], ["#c8ad8d", "#273a2d"]]
   let numero = -1;
-  console.log({ ciudades, city });
 
   useEffect(() => {
     dispatch(getAllCities());
@@ -23,7 +24,10 @@ const Home = () => {
       <div>
         <div className='title__ciudades'>
           <h1 className='grafic_h1'>Ciudades DayStore</h1>
-          <DropdownCom />
+          <DropdownCom 
+          title="Ver Ciudad"
+          data={ciudades}
+          />
         </div>
         <hr className='hrGrafic' />
         <Row className="content__graficCard">
@@ -37,7 +41,7 @@ const Home = () => {
                   meta={e.meta}
                   servicio={e.servicio}
                   colorGraf={colorGraf[numero]}
-
+                  id={e.id}
                 />
               </Col>
             })
@@ -49,6 +53,7 @@ const Home = () => {
                     meta={e.meta}
                     servicio={e.servicio}
                     colorGraf={colorGraf[1]}
+                    id={e.id}
                   />
                 </Col>)
           }
