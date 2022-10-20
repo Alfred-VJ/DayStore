@@ -56,7 +56,7 @@ const GraficCard = forwardRef((props, ref) => {
               breakpoint: 480,
               options: {
                 chart: {
-                  width: 320,
+                  width: 300,
                   // colors: ['#F44336', '#E91E63'],
                 },
 
