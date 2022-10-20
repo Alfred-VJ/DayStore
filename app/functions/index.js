@@ -20,8 +20,6 @@ app.get('/appDayStore', (req, res) => {
 app.post('/appDayStore', async (req, res) => {
     const data = req.body;
     try {
-
-        console.log(data)
         const cities = await DB.collection('ciudades').doc().create({
             ciudad: data.ciudad,
             servicio: data.servicio,

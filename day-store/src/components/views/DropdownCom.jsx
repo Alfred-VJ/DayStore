@@ -31,17 +31,18 @@ const DropdownCom = (props) => {
     }
 
     return (
-        <div>
-            <Dropdown>
+        <div id="id_drop">
+            <Dropdown id="id_drop_">
                 <Dropdown.Toggle className='btn__dorp' id="dropdown-basic">
                     {props.title}
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu>
-                    <Dropdown.Item onClick={()=>selectCity("all")} > Una sola gráfica </Dropdown.Item>
-                    <Dropdown.Item onClick={allCities} > Todas las ciudades </Dropdown.Item>
+                <Dropdown.Menu id="id_drop__">
+                    <Dropdown.Item id='listOpcion_1' onClick={()=>selectCity("all")} > Una sola gráfica </Dropdown.Item>
+                    <Dropdown.Item id='listOpcion_2' onClick={allCities} > Todas las ciudades </Dropdown.Item>
                     {
                         props.data.map(e => <Dropdown.Item
+                        id={"listOpcion_"+e.id}
                             onClick={() => selectCity(e.id)}
                         >
                             {e.ciudad}

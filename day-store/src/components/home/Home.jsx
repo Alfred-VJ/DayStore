@@ -3,10 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllCities } from '../../redux/actions';
 import PrintPdf from '../views/GraficCard';
-import { Col, Row, Card, Dropdown } from 'react-bootstrap'
+import { Col, Row, Spinner } from 'react-bootstrap'
 import DropdownCom from '../views/DropdownCom';
-import Chart from 'react-apexcharts';
-import { saveAsJpeg, saveAsPng } from 'save-html-as-image';
 import PrintPdfP from '../views/GraficaPrincipal';
 
 const Home = () => {
@@ -58,58 +56,64 @@ const Home = () => {
       })
     }
   }, [ciudades])
-  console.log(views)
   return (
     <div className='cont__graficas'>
-      <div>
-        <div className='title__ciudades'>
-          <h1 className='grafic_h1'>Ciudades DayStore</h1>
-          <DropdownCom
-            title="Opciones de vista"
-            data={ciudades}
-          />
-        </div>
-        <hr className='hrGrafic' />
-        {
-          values?.ciudadG && !views ? <PrintPdfP
-            labels={labels}
-            series={series}
-            options={options}
-            city={city}
-            values={values}
-          />
-            :
-            <Row className="content__graficCard">
-              {
-                ciudades && !city.length ? ciudades.map(e => {
-                  if (numero > 3) numero = 0;
-                  else ++numero
-                  return <Col>
-                    <PrintPdf
-                      ciudad={e.ciudad}
-                      meta={e.meta}
-                      servicio={e.servicio}
-                      colorGraf={colorGraf[numero]}
-                      id={e.id}
-                    />
-                  </Col>
-                })
-                  :
-                  city.map(e =>
-                    <Col>
-                      <PrintPdf
-                        ciudad={e.ciudad}
-                        meta={e.meta}
-                        servicio={e.servicio}
-                        colorGraf={colorGraf[1]}
-                        id={e.id}
-                      />
-                    </Col>)
-              }
-            </Row>
-        }
+      {
+        ciudades.length ?
+          <div>
+            <div className='title__ciudades'>
+              <h1 className='grafic_h1'>Ciudades DayStore</h1>
+              <DropdownCom
+                title="Opciones de vista"
+                data={ciudades}
+              />
+            </div>
+            <hr className='hrGrafic' />
+            {
+              values?.ciudadG && !views ? <PrintPdfP
+                labels={labels}
+                series={series}
+                options={options}
+                city={city}
+                values={values}
+              />
+                :
+                <Row className="content__graficCard">
+                  {
+                    ciudades && !city.length ? ciudades.map(e => {
+                      if (numero > 3) numero = 0;
+                      else ++numero
+                      return <Col key={e.id+"colV"}>
+                        <PrintPdf
+                          ciudad={e.ciudad}
+                          meta={e.meta}
+                          servicio={e.servicio}
+                          colorGraf={colorGraf[numero]}
+                          id={e.id}
+                        />
+                      </Col>
+                    })
+                      :
+                      city.map(e =>
+                        <Col key={e.id+"colS"}>
+                          <PrintPdf
+                            ciudad={e.ciudad}
+                            meta={e.meta}
+                            servicio={e.servicio}
+                            colorGraf={colorGraf[1]}
+                            id={e.id}
+                          />
+                        </Col>)
+                  }
+                </Row>
+            }
 
-      </div>
+          </div>
+          :
+          <div style={{ height: "100vh" }}>
+            <Spinner animation="border" variant='info' style={{height:"30vh", width:"30vh", marginTop:'20%', marginLeft:'40%'}}/>
+          </div>
+      }
     </div>
   )
 }
