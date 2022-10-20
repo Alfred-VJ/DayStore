@@ -1,70 +1,63 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Apéndice
+- Descripción del proyecto
+- Link del proyecto
+- Instrucciones de instalación
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Test DayStore
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Este proyecto fu realizado como una prueba técnica con un margen de 72 horas.
 
-### `npm test`
+El proyecto cuenta con una página de aterrizaje la cual contiene un botón que te direcciona a la página principal, esta página principal muestra una lista de ciudades con sus respectivas gráficas por datos que son requeridos de una api que también fue creada por mi.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Link del proyecto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+https://daystore.vercel.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![App Screenshot](https://github.com/Alfred-VJ/DayStore/blob/main/day-store/src/assests/muestra.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Authors
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [@Alfred-VJ](https://github.com/Alfred-VJ)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
+Lo primero que necesitamos será clonar el proyecto, para esto nos dirigimos a el siguiente link: 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [@proyecto](https://github.com/Alfred-VJ/DayStore)
+#### Comandos para clonar, instalar y correr DayStore(FrontEnd) con ```npm```
 
-### Code Splitting
+```bash
+  git clone https://github.com/Alfred-VJ/DayStore.git
+  cd  DayStore
+  cd  day-store
+  npm install
+  npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Primero clonamos el proyecto
+![App Screenshot](https://github.com/Alfred-VJ/DayStore/blob/main/day-store/src/assests/paso%20uno.png)
+![App Screenshot](https://github.com/Alfred-VJ/DayStore/blob/main/day-store/src/assests/paso%20dos.png)
+## Ahora tenemos que acceder a la carpeta que nos genero git al clonarlo
+![App Screenshot](https://github.com/Alfred-VJ/DayStore/blob/main/day-store/src/assests/paso%20tres.png)
+### Nos encontramos con dos carpetas mas "app" contiene el BackEnd y "day-store" contiene el FrontEnd, nosotros accederemos a la carpeta "day-store"
+![App Screenshot](https://github.com/Alfred-VJ/DayStore/blob/main/day-store/src/assests/paso%20cuatro.png)
+### Una vez que estamos posicionados en la carpeta "day-store" ejecutaremos el ```npm install```
+![App Screenshot](https://github.com/Alfred-VJ/DayStore/blob/main/day-store/src/assests/paso%20cinco.png)
+### Cuando las instalaciones hayan terminado podemos corree el proyecto con el comando ```npm start```
+![App Screenshot](https://github.com/Alfred-VJ/DayStore/blob/main/day-store/src/assests/paso%20seis.png)
+### Listo!
+![App Screenshot](https://github.com/Alfred-VJ/DayStore/blob/main/day-store/src/assests/paso%20siete.png)
 
-### Analyzing the Bundle Size
+La petición a la Api la hace desde el servidor de firebase entonces no se necesita ninguna instalación extra para correr la aplicación de manera local mientras el servicio este disponible.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
