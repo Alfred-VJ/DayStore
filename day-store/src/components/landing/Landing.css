@@ -50,3 +50,30 @@
     color:rgb(185, 127, 0);
     font-size: medium;
 }
+
+@media (max-width: 600px) {
+    .bnt-landing{
+        background-color: rgb(185, 127, 0);
+        border: none;
+        width: 100%;
+        height: 6vh;
+        font-size: larger;
+        margin-top: 10%;
+    }
+
+    .text__landing h1{
+        font-size: 350%;
+    }
+    
+    .text__landing h3{
+        font-size: 100%;
+        margin-top: 3%;
+        margin-bottom: 8%;
+    }
+
+    .text__landing p{
+        font-size: 90%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+  }

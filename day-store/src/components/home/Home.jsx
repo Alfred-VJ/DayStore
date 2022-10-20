@@ -23,7 +23,7 @@ const Home = () => {
       breakpoint: 480,
       options: {
         chart: {
-          width: 200,
+          width: 320,
           // colors: ['#F44336', '#E91E63'],
         },
         legend: {
@@ -110,7 +110,7 @@ const Home = () => {
 
           </div>
           :
-          <div style={{ height: "100vh" }}>
+          <div className='spinerHome' style={{ height: "100vh" }}>
             <Spinner animation="border" variant='info' style={{height:"30vh", width:"30vh", marginTop:'20%', marginLeft:'40%'}}/>
           </div>
       }

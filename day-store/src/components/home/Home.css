@@ -58,3 +58,18 @@ position: absolute;
     border: solid rgb(185, 127, 0);
     color:rgb(185, 127, 0);
 }
+
+
+@media (max-width: 600px){
+    .spinerHome{
+        margin-left: -30%;
+        margin-top: 30%;
+    }
+
+    .grafic_h1{
+        font-size: 110%;
+        margin-right: 15%;
+    }
+
+  
+}
