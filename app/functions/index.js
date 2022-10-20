@@ -13,10 +13,6 @@ admin.initializeApp({
 
 const DB = admin.firestore();
 
-app.get('/appDayStore', (req, res) => {
-    return res.send('Hola mundo');
-})
-
 app.post('/appDayStore', async (req, res) => {
     const data = req.body;
     try {
