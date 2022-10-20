@@ -52,7 +52,13 @@ const PrintPdfP = (props) => {
         content: () => componentRef.current,
     });
 
-    let btn = <Dropdown.Item onClick={handlePrint}>Imprimir pdf</Dropdown.Item>
+    const atr = () => {
+        setTimeout(() => {
+          handlePrint()
+        }, 100)
+      }
+
+    let btn = <Dropdown.Item onClick={atr}>Imprimir pdf</Dropdown.Item>
     return (
         <div id='AllCities' style={{height:"100vh"}}>
 
