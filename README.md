@@ -9,7 +9,7 @@
 
 # Test DayStore
 
-Este proyecto fu realizado como una prueba técnica con un margen de 72 horas.
+Este proyecto fue realizado como una prueba técnica con un margen de 72 horas.
 
 El proyecto cuenta con una página de aterrizaje la cual contiene un botón que te direcciona a la página principal, esta página principal muestra una lista de ciudades con sus respectivas gráficas por datos que son requeridos de una api que también fue creada por mi.
 
