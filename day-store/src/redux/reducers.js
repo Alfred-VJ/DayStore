@@ -1,8 +1,9 @@
-import { GET_CITY, GET_CIUDADES, RESET } from "./actions.types";
+import { GET_CITY, GET_CIUDADES, RESET, TYPE_VIEWS, TYPE_VIEWS_TRUE } from "./actions.types";
 
 const initialState = {
     ciudades: [],
     city: [],
+    views: true,
 }
 
 export const ciudadesReducer = (state = initialState, actions) => {
@@ -21,7 +22,17 @@ export const ciudadesReducer = (state = initialState, actions) => {
             return {
                 ...state,
                 city: [],
-            }
+            };
+        case TYPE_VIEWS:
+            return {
+                ...state,
+                views: false,
+            };
+        case TYPE_VIEWS_TRUE:
+            return {
+                ...state,
+                views: true,
+            };
         default: return state;
     }
 }

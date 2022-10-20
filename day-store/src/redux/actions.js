@@ -1,4 +1,4 @@
-import { GET_CIUDADES, GET_CITY, RESET } from "./actions.types";
+import { GET_CIUDADES, GET_CITY, RESET, TYPE_VIEWS, TYPE_VIEWS_TRUE } from "./actions.types";
 import axios from 'axios';
 
 
@@ -26,5 +26,17 @@ export const getCity = (id) => {
 export const reset = () => {
     return {
         type: RESET,
+    }
+}
+
+export const typeViews = () => {
+    return {
+        type: TYPE_VIEWS,
+    }
+}
+
+export const viewsTrue = () => {
+    return {
+        type: TYPE_VIEWS_TRUE,
     }
 }

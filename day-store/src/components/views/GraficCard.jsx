@@ -10,9 +10,9 @@ const GraficCard = forwardRef((props, ref) => {
   const imp = (formato) => {
     formato === "png" ? saveAsPng(ii__gr) : saveAsJpeg(ii__gr);
   }
-console.log(ii__gr)
+
   return (
-    <div ref={ref} className='__Card' id={props.id}>
+    <div ref={ref} className='__Card'>
       <Card className='__CardUp'>
         <div className='title__btn'>
           <h3 className='title__Card'>{props.ciudad}</h3>
@@ -56,7 +56,7 @@ console.log(ii__gr)
               breakpoint: 480,
               options: {
                 chart: {
-                  width: 200,
+                  width: 400,
                   // colors: ['#F44336', '#E91E63'],
                 },
 
@@ -71,8 +71,8 @@ console.log(ii__gr)
             <Card.Title className='m-3'>{props.ciudad}</Card.Title>
             <Card.Text>
               <ul>
-                <li>{`Meta: Se requieren ${props.meta} para alcanzar la meta propuesta.`}</li>
-                <li>{`Alcance: Se alcanzaron ${props.servicio} de los ${props.meta}`}</li>
+                <li>{`Meta: Se requieren ${props.meta} servicios para alcanzar la meta propuesta.`}</li>
+                <li>{`Alcance: Se alcanzaron ${props.servicio} de los ${props.meta} servicios, faltando ${props.meta - props.servicio} para alcanzar la meta propuesta.`}</li>
               </ul>
             </Card.Text>
           </Card.Body>
@@ -91,7 +91,7 @@ const PrintPdf = (props) => {
 
   let btn = <Dropdown.Item onClick={handlePrint}>Imprimir pdf</Dropdown.Item>
   return (
-    <div>
+    <div id={props.id} style={{height:"100vh"}}>
 
       <GraficCard
         ref={componentRef}

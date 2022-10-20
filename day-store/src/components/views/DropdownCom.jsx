@@ -1,24 +1,35 @@
 import React from 'react';
 import { Dropdown } from 'react-bootstrap';
-import { useSelector, useDispatch } from 'react-redux';
-import { getAllCities, getCity, reset } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
+import { getAllCities, getCity, reset, typeViews, viewsTrue } from '../../redux/actions';
 
 const DropdownCom = (props) => {
-    const { ciudades } = useSelector(state => state);
     const dispatch = useDispatch();
 
     const selectCity = (id) => {
-        console.log(id)
-        dispatch(getCity(id));
-        setTimeout(() => {
+        if (id === "all") {
+            dispatch(typeViews());
+            setTimeout(() => {
+                dispatch(getAllCities())
+                dispatch(getCity(id));
+            }, 1000)
+        }
+        else {
             dispatch(getCity(id));
-        }, 1000)
+            setTimeout(() => {
+                dispatch(getCity(id));
+            }, 1000)
+            dispatch(viewsTrue())
+        }
+
     }
 
     const allCities = () => {
         dispatch(reset())
         dispatch(getAllCities())
+        dispatch(viewsTrue())
     }
+
     return (
         <div>
             <Dropdown>
@@ -27,7 +38,8 @@ const DropdownCom = (props) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item onClick={allCities} > Todas las opciones </Dropdown.Item>
+                    <Dropdown.Item onClick={()=>selectCity("all")} > Una sola gráfica </Dropdown.Item>
+                    <Dropdown.Item onClick={allCities} > Todas las ciudades </Dropdown.Item>
                     {
                         props.data.map(e => <Dropdown.Item
                             onClick={() => selectCity(e.id)}
