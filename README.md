@@ -58,6 +58,8 @@ Lo primero que necesitamos será clonar el proyecto, para esto nos dirigimos a e
 ### Listo!
 ![App Screenshot](https://github.com/Alfred-VJ/DayStore/blob/main/day-store/src/assests/paso%20siete.png)
 
-La petición a la Api la hace desde el servidor de firebase entonces no se necesita ninguna instalación extra para correr la aplicación de manera local mientras el servicio este disponible.
+La petición a la Api la hace desde el servidor de firebase entonces no se necesita ninguna instalación extra para correr la aplicación de manera local mientras el servicio este disponible. 
+El endpont de la api es el siguiente:
+(https://us-central1-daystore-bcd8f.cloudfunctions.net/app/appDayStore/ciudades)
 
 
