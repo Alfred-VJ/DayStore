@@ -11,7 +11,7 @@ export const ciudadesReducer = (state = initialState, actions) => {
         case GET_CIUDADES:
             return {
                 ...state,
-                ciudades: actions.payload.ciudades
+                ciudades: actions.payload
             };
         case GET_CITY:
             return {

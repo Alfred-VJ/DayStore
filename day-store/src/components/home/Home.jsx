@@ -59,7 +59,7 @@ const Home = () => {
   return (
     <div className='cont__graficas'>
       {
-        ciudades.length ?
+        ciudades?.length ?
           <div>
             <div className='title__ciudades'>
               <h1 className='grafic_h1'>Ciudades DayStore</h1>
