@@ -38,7 +38,9 @@ const Home = () => {
   const labels = values.metG
 
   useEffect(() => {
-    dispatch(getAllCities());
+    setTimeout(() => {
+      dispatch(getAllCities());
+    }, 1000);
   }, []);
 
   useEffect(() => {
@@ -83,7 +85,7 @@ const Home = () => {
                     ciudades && !city.length ? ciudades.map(e => {
                       if (numero > 3) numero = 0;
                       else ++numero
-                      return <Col key={e.id+"colV"}>
+                      return <Col key={e.id + "colV"}>
                         <PrintPdf
                           ciudad={e.ciudad}
                           meta={e.meta}
@@ -95,7 +97,7 @@ const Home = () => {
                     })
                       :
                       city.map(e =>
-                        <Col key={e.id+"colS"}>
+                        <Col key={e.id + "colS"}>
                           <PrintPdf
                             ciudad={e.ciudad}
                             meta={e.meta}
@@ -111,7 +113,7 @@ const Home = () => {
           </div>
           :
           <div className='spinerHome' style={{ height: "100vh" }}>
-            <Spinner animation="border" variant='info' style={{height:"30vh", width:"30vh", marginTop:'20%', marginLeft:'40%'}}/>
+            <Spinner animation="border" variant='info' style={{ height: "30vh", width: "30vh", marginTop: '20%', marginLeft: '40%' }} />
           </div>
       }
     </div>
