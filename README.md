@@ -19,7 +19,8 @@ El proyecto cuenta con una página de aterrizaje la cual contiene un botón que 
 
 https://daystore.vercel.app/
 
-## Di de baja la base de datos del proyecto para que no me generará gastos una disculpa. pero aun así dejo la descripción original.
+## Di de baja la base de datos del proyecto para que no me generará gastos una disculpa. Pero aun así dejo la descripción original. aunque el link no mostrara los datos de la base de datos.
+
 ## Screenshots
 
 ![App Screenshot](https://github.com/Alfred-VJ/DayStore/blob/main/day-store/src/assests/muestra.png)
