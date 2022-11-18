@@ -9,7 +9,7 @@
 
 # Test DayStore
 
-Este proyecto fu realizado como una prueba técnica con un margen de 72 horas.
+Este proyecto fue realizado como una prueba técnica con un margen de 72 horas.
 
 El proyecto cuenta con una página de aterrizaje la cual contiene un botón que te direcciona a la página principal, esta página principal muestra una lista de ciudades con sus respectivas gráficas por datos que son requeridos de una api que también fue creada por mi.
 
@@ -19,6 +19,7 @@ El proyecto cuenta con una página de aterrizaje la cual contiene un botón que 
 
 https://daystore.vercel.app/
 
+## Di de baja la base de datos del proyecto para que no me generará gastos una disculpa. Pero aun así dejo la descripción original. aunque el link no mostrara los datos de la base de datos.
 
 ## Screenshots
 
@@ -58,6 +59,8 @@ Lo primero que necesitamos será clonar el proyecto, para esto nos dirigimos a e
 ### Listo!
 ![App Screenshot](https://github.com/Alfred-VJ/DayStore/blob/main/day-store/src/assests/paso%20siete.png)
 
-La petición a la Api la hace desde el servidor de firebase entonces no se necesita ninguna instalación extra para correr la aplicación de manera local mientras el servicio este disponible.
+La petición a la Api la hace desde el servidor de firebase entonces no se necesita ninguna instalación extra para correr la aplicación de manera local mientras el servicio este disponible. 
+El endpont de la api es el siguiente:
+(https://us-central1-daystore-bcd8f.cloudfunctions.net/app/appDayStore/ciudades)
 
 
